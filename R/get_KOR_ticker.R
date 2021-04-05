@@ -86,8 +86,11 @@ get_KOR_ticker = function(src = 'krx') {
     # }
 
     down_table = list()
+	print("krx down list")
     down_table[[1]] = down_sector(date)
+	print("krx down sector")
     down_table[[2]] = down_value(date)
+	print("krx down value")
 
     data = merge(down_table[[1]], down_table[[2]], by = '\uc885\ubaa9\ucf54\ub4dc')
     data = data[order(-data['\uc2dc\uac00\ucd1d\uc561\u0028\uc6d0\u0029']), ]
