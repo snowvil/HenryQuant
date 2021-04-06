@@ -44,6 +44,9 @@ get_KOR_ticker = function(src = 'krx') {
                   add_headers(referer = gen_otp_url)) %>%
         read_html() %>% html_text() %>% read_csv()
 
+	
+	  print(down)
+		
       data_sector = down[, c(1:4, 7)]
 	  
 	  print(data_sector)
