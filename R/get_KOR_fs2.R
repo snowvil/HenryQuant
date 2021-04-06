@@ -24,7 +24,7 @@ get_KOR_fs2 = function() {
 
   value_name = "KOR_value"
   fs_name = "KOR_fs_2"
-  ticker = get_KOR_ticker()
+  ticker = get_KOR_ticker('naver')
 
   ifelse(dir.exists(value_name), FALSE, dir.create(value_name))
   ifelse(dir.exists(fs_name), FALSE, dir.create(fs_name))
