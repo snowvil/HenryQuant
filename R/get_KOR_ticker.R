@@ -45,6 +45,9 @@ get_KOR_ticker = function(src = 'krx') {
         read_html() %>% html_text() %>% read_csv()
 
       data_sector = down[, c(1:4, 7)]
+	  
+	  print(data_sector)
+	  
       write.csv(data_sector, 'data_sector.csv')
 
       return(data_sector)
